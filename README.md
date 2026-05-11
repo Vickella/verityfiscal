@@ -15,7 +15,7 @@ An ERPNext application for virtual fiscalisation integrating with the Fiscal Dev
 ## Installation
 
 ```bash
-bench get-app https://github.com/yourrepo/verityfiscal.git
+bench get-app https://github.com/Vickella/verityfiscal.git
 bench install-app verityfiscal
 ```
 

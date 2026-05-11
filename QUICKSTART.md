@@ -10,7 +10,7 @@ VERITYFiscal is an **ERPNext application** that integrates your financial system
 
 ```bash
 cd ~/frappe-bench
-bench get-app https://github.com/verityfiscal/verityfiscal.git
+bench get-app https://github.com/Vickella/verityfiscal.git
 bench install-app verityfiscal --site your_site_name
 ```
 

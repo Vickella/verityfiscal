@@ -11,7 +11,7 @@ setup(
 	description="ERPNext FDMS Integration for Virtual Fiscalisation - ZIMRA Compliant",
 	long_description=long_description,
 	long_description_content_type="text/markdown",
-	url="https://github.com/verityfiscal/verityfiscal",
+	url="https://github.com/Vickella/verityfiscal",
 	packages=find_packages(),
 	classifiers=[
 		"Programming Language :: Python :: 3",
