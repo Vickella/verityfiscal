@@ -1,0 +1,84 @@
+{
+  "name": "FDMS Transaction Log",
+  "doctype": "DocType",
+  "module": "Verity Fiscal",
+  "description": "Audit log for FDMS transactions",
+  "owner": "Administrator",
+  "document_type": "Document",
+  "autoname": "naming_series:",
+  "naming_series": "FDL-.#####",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "FDL-.#####",
+      "hidden": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "transaction_details",
+      "fieldtype": "Section Break",
+      "label": "Transaction Details"
+    },
+    {
+      "fieldname": "reference_doctype",
+      "fieldtype": "Data",
+      "label": "Reference Doctype"
+    },
+    {
+      "fieldname": "reference_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Reference Name",
+      "options": "reference_doctype"
+    },
+    {
+      "fieldname": "col1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "transaction_type",
+      "fieldtype": "Select",
+      "label": "Transaction Type",
+      "options": "FISCALISED\nFAILED\nRETRY\nCANCELLED\nVERIFIED",
+      "reqd": 1
+    },
+    {
+      "fieldname": "request_timestamp",
+      "fieldtype": "Datetime",
+      "label": "Request Timestamp"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "response_data",
+      "fieldtype": "Code",
+      "label": "Response Data",
+      "options": "json"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "submit": 0,
+      "cancel": 0,
+      "create": 0,
+      "delete": 0
+    },
+    {
+      "role": "Accountant",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "submit": 0,
+      "cancel": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

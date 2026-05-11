@@ -1,0 +1,138 @@
+{
+  "name": "Fiscal Device",
+  "doctype": "DocType",
+  "module": "Verity Fiscal",
+  "description": "Fiscal Device Management for FDMS Integration",
+  "owner": "Administrator",
+  "document_type": "Document",
+  "autoname": "format:{device_type}-{serial_number}",
+  "fields": [
+    {
+      "fieldname": "device_details",
+      "fieldtype": "Section Break",
+      "label": "Device Details"
+    },
+    {
+      "fieldname": "device_name",
+      "fieldtype": "Data",
+      "label": "Device Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "device_type",
+      "fieldtype": "Select",
+      "label": "Device Type",
+      "reqd": 1,
+      "options": "PRINTER\nCASH_REGISTER\nPOS_TERMINAL\nWEB_SERVICE"
+    },
+    {
+      "fieldname": "serial_number",
+      "fieldtype": "Data",
+      "label": "Serial Number",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "col1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "taxpayer_tin",
+      "fieldtype": "Data",
+      "label": "Taxpayer TIN",
+      "reqd": 1
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Data",
+      "label": "Device Location"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "fdms_details",
+      "fieldtype": "Section Break",
+      "label": "FDMS Details"
+    },
+    {
+      "fieldname": "fdms_device_id",
+      "fieldtype": "Data",
+      "label": "FDMS Device ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "activation_code",
+      "fieldtype": "Password",
+      "label": "Activation Code",
+      "hidden": 1
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "device_status",
+      "fieldtype": "Select",
+      "label": "Device Status",
+      "read_only": 1,
+      "options": "PENDING_REGISTRATION\nPENDING_ACTIVATION\nACTIVE\nINACTIVE\nDELETED",
+      "default": "PENDING_REGISTRATION"
+    },
+    {
+      "fieldname": "registration_date",
+      "fieldtype": "Datetime",
+      "label": "Registration Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "activation_date",
+      "fieldtype": "Datetime",
+      "label": "Activation Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_sync",
+      "fieldtype": "Datetime",
+      "label": "Last Sync",
+      "read_only": 1
+    },
+    {
+      "fieldname": "operations",
+      "fieldtype": "Section Break",
+      "label": "Operations"
+    },
+    {
+      "fieldname": "last_error",
+      "fieldtype": "Text",
+      "label": "Last Error"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "submit": 0,
+      "cancel": 0,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accountant",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "submit": 0,
+      "cancel": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

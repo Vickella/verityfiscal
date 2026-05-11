@@ -1,0 +1,185 @@
+{
+  "name": "Compliance Report",
+  "doctype": "DocType",
+  "module": "Verity Fiscal",
+  "description": "Daily compliance report for FDMS transactions",
+  "owner": "Administrator",
+  "document_type": "Document",
+  "autoname": "naming_series:",
+  "naming_series": "CR-.#####",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "CR-.#####",
+      "hidden": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "report_details",
+      "fieldtype": "Section Break",
+      "label": "Report Details"
+    },
+    {
+      "fieldname": "report_date",
+      "fieldtype": "Date",
+      "label": "Report Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "financial_summary",
+      "fieldtype": "Section Break",
+      "label": "Financial Summary"
+    },
+    {
+      "fieldname": "invoices_count",
+      "fieldtype": "Int",
+      "label": "Total Invoices",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_amount",
+      "fieldtype": "Currency",
+      "label": "Total Amount",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Select",
+      "label": "Currency",
+      "options": "ZWL\nUSD\nGBP\nEUR",
+      "default": "ZWL",
+      "read_only": 1
+    },
+    {
+      "fieldname": "tax_summary",
+      "fieldtype": "Section Break",
+      "label": "Tax Summary"
+    },
+    {
+      "fieldname": "total_tax_collected",
+      "fieldtype": "Currency",
+      "label": "Total Tax Collected",
+      "read_only": 1
+    },
+    {
+      "fieldname": "tax_by_rate",
+      "fieldtype": "Table",
+      "label": "Tax by Rate",
+      "child_table": "Compliance Report Tax Detail"
+    },
+    {
+      "fieldname": "transaction_summary",
+      "fieldtype": "Section Break",
+      "label": "Transaction Summary"
+    },
+    {
+      "fieldname": "successful_transmissions",
+      "fieldtype": "Int",
+      "label": "Successful Transmissions",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "failed_transmissions",
+      "fieldtype": "Int",
+      "label": "Failed Transmissions",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col6",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "retried_transmissions",
+      "fieldtype": "Int",
+      "label": "Retried Transmissions",
+      "read_only": 1
+    },
+    {
+      "fieldname": "device_summary",
+      "fieldtype": "Section Break",
+      "label": "Device Summary"
+    },
+    {
+      "fieldname": "active_devices",
+      "fieldtype": "Int",
+      "label": "Active Devices",
+      "read_only": 1
+    },
+    {
+      "fieldname": "col7",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "inactive_devices",
+      "fieldtype": "Int",
+      "label": "Inactive Devices",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "remarks",
+      "fieldtype": "Text",
+      "label": "Remarks"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "submit": 0,
+      "cancel": 0,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "Accountant",
+      "permlevel": 0,
+      "read": 1,
+      "write": 0,
+      "submit": 0,
+      "cancel": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

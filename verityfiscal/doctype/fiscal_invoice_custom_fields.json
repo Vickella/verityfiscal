@@ -1,0 +1,92 @@
+{
+  "name": "Fiscal Invoice Custom Fields",
+  "doctype": "DocType",
+  "module": "Verity Fiscal",
+  "description": "Custom fields for fiscal invoice tracking",
+  "owner": "Administrator",
+  "document_type": "Document",
+  "custom": 1,
+  "fields": [
+    {
+      "fieldname": "fiscal_details",
+      "fieldtype": "Section Break",
+      "label": "Fiscal Details",
+      "insert_after": "total_in_words"
+    },
+    {
+      "fieldname": "fiscal_device",
+      "fieldtype": "Link",
+      "label": "Fiscal Device",
+      "options": "Fiscal Device",
+      "insert_after": "fiscal_details"
+    },
+    {
+      "fieldname": "col1",
+      "fieldtype": "Column Break",
+      "insert_after": "fiscal_device"
+    },
+    {
+      "fieldname": "fiscal_status",
+      "fieldtype": "Select",
+      "label": "Fiscal Status",
+      "options": "PENDING\nFISCALISED\nFAILED\nCANCELLED",
+      "read_only": 1,
+      "default": "PENDING",
+      "insert_after": "col1"
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Column Break",
+      "insert_after": "fiscal_status"
+    },
+    {
+      "fieldname": "fiscal_code",
+      "fieldtype": "Data",
+      "label": "Fiscal Code",
+      "read_only": 1,
+      "insert_after": "col2"
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "Column Break",
+      "insert_after": "fiscal_code"
+    },
+    {
+      "fieldname": "fiscalisation_date",
+      "fieldtype": "Datetime",
+      "label": "Fiscalisation Date",
+      "read_only": 1,
+      "insert_after": "col3"
+    },
+    {
+      "fieldname": "col4",
+      "fieldtype": "Column Break",
+      "insert_after": "fiscalisation_date"
+    },
+    {
+      "fieldname": "qr_code",
+      "fieldtype": "Text",
+      "label": "QR Code",
+      "read_only": 1,
+      "insert_after": "col4"
+    },
+    {
+      "fieldname": "col5",
+      "fieldtype": "Column Break",
+      "insert_after": "qr_code"
+    },
+    {
+      "fieldname": "fdms_reference",
+      "fieldtype": "Data",
+      "label": "FDMS Reference",
+      "read_only": 1,
+      "insert_after": "col5"
+    },
+    {
+      "fieldname": "customer_tax_id",
+      "fieldtype": "Data",
+      "label": "Customer Tax ID",
+      "insert_after": "customer"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "name": "FDMS Settings",
+  "doctype": "DocType",
+  "module": "Verity Fiscal",
+  "description": "FDMS API Configuration Settings",
+  "owner": "Administrator",
+  "document_type": "Document",
+  "issingle": 1,
+  "autoname": "FDMS Settings",
+  "fields": [
+    {
+      "fieldname": "fdms_configuration",
+      "fieldtype": "Section Break",
+      "label": "FDMS Configuration"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enable FDMS Integration",
+      "default": 0
+    },
+    {
+      "fieldname": "environment",
+      "fieldtype": "Select",
+      "label": "Environment",
+      "options": "sandbox\nproduction",
+      "default": "sandbox",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Password",
+      "label": "API Key",
+      "reqd": 1
+    },
+    {
+      "fieldname": "col2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "API Secret",
+      "reqd": 1
+    },
+    {
+      "fieldname": "automation_settings",
+      "fieldtype": "Section Break",
+      "label": "Automation Settings"
+    },
+    {
+      "fieldname": "auto_fiscalise",
+      "fieldtype": "Check",
+      "label": "Auto-Fiscalise on Invoice Submit",
+      "default": 0
+    },
+    {
+      "fieldname": "auto_sync_devices",
+      "fieldtype": "Check",
+      "label": "Auto Sync Device Status",
+      "default": 1
+    },
+    {
+      "fieldname": "retry_failed_transmissions",
+      "fieldtype": "Check",
+      "label": "Retry Failed Transmissions",
+      "default": 1
+    },
+    {
+      "fieldname": "col3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "retry_attempts",
+      "fieldtype": "Int",
+      "label": "Retry Attempts",
+      "default": 3
+    },
+    {
+      "fieldname": "retry_interval",
+      "fieldtype": "Int",
+      "label": "Retry Interval (seconds)",
+      "default": 300
+    },
+    {
+      "fieldname": "compliance_settings",
+      "fieldtype": "Section Break",
+      "label": "Compliance Settings"
+    },
+    {
+      "fieldname": "generate_compliance_reports",
+      "fieldtype": "Check",
+      "label": "Generate Compliance Reports",
+      "default": 1
+    },
+    {
+      "fieldname": "log_all_transactions",
+      "fieldtype": "Check",
+      "label": "Log All Transactions",
+      "default": 1
+    },
+    {
+      "fieldname": "col4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "compliance_report_frequency",
+      "fieldtype": "Select",
+      "label": "Compliance Report Frequency",
+      "options": "Daily\nWeekly\nMonthly",
+      "default": "Daily"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "submit": 0,
+      "cancel": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}
