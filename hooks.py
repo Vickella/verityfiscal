@@ -13,8 +13,8 @@ app_version = app_version
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/verityfiscal/css/verityfiscal.css"
-# app_include_js = "/assets/verityfiscal/js/verityfiscal.js"
+app_include_css = "/assets/verityfiscal/css/verityfiscal.css"
+app_include_js = "/assets/verityfiscal/js/verityfiscal.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/verityfiscal/css/verityfiscal-web.css"
