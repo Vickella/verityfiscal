@@ -1,0 +1,4 @@
+# ESLint ignore file for VERITYFiscal
+# Ignore minimal stub files
+verityfiscal/public/js/*.js
+verityfiscal/public/css/*.css

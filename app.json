@@ -1,0 +1,16 @@
+{
+	"app_name": "verityfiscal",
+	"app_title": "Verity Fiscal",
+	"app_publisher": "VERITYFiscal",
+	"app_description": "ERPNext FDMS Integration for Virtual Fiscalisation - ZIMRA Compliant",
+	"app_version": "1.0.0",
+	"app_icon": "octicon octicon-file-code",
+	"app_color": "#4472C4",
+	"app_email": "support@verityfiscal.com",
+	"app_license": "GNU General Public License v3",
+	"app_url": "https://github.com/Vickella/verityfiscal",
+	"source_link": "https://github.com/Vickella/verityfiscal",
+	"app_category": "Accounting",
+	"hide_in_desk": false,
+	"minimum_frappe_version": "15.0"
+}
