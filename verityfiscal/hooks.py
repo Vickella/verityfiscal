@@ -1,4 +1,4 @@
-from . import __version__ as app_version
+from .. import __version__ as app_version
 
 app_name = "verityfiscal"
 app_title = "Verity Fiscal"
